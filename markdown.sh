@@ -36,7 +36,7 @@ do
 		continue
 	elif echo "$LINE" | grep '<https://.*>' > /dev/null
 	then
-		echo $(echo "$LINE" | sed 's@<https:\([^>]\+\)>@<a href=\"https://\1\">https://\1</a>@g')
+		echo $(echo "$LINE" | sed 's@<https:\([^>]\+\)>@<a href=\"https:\1\">https:\1</a>@g')
 		continue
 	elif echo "$LINE" | grep ' - ' > /dev/null 
 	then
